@@ -1,5 +1,5 @@
 ﻿
-function isValidInput(input,min, max){
+function isValidNumericInput(input, min, max){
 
     if(!isNumericString(input)){
         return false;
@@ -20,4 +20,4 @@ function isNumericString(input) {
 function isNullOrEmpty(str){
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
-module.exports = { isNullOrEmpty, isNumericString, isValidInput, isBetweenLimit};
+module.exports = { isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit};

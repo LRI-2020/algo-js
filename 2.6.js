@@ -8,7 +8,7 @@ const maxDay=7;
 do {
     input = prompt("Please, enter a number between 1 and 7 : ");
 
-}while(!helpers.isValidInput(input,minDay,maxDay));
+}while(!helpers.isValidNumericInput(input,minDay,maxDay));
 
 giveDayOfWeek(Number(input));
 

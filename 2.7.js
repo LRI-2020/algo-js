@@ -9,7 +9,7 @@ let count;
 do{
     count = prompt("How much numbers do you want to enter (max :" + max +" )? ");
 
-}while(!helpers.isValidInput(count,min,max));
+}while(!helpers.isValidNumericInput(count,min,max));
 
 let result = computeSum(Number(count));
 
