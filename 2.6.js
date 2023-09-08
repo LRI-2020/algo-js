@@ -1,26 +1,58 @@
 ﻿const prompt = require('prompt-sync')();
 
-const bestNumber = 42;
 let input;
+const minDay = 1;
+const maxDay=7;
 
-input = askForInput("What is you favorite number ? ");
+do {
+    input = prompt("Please, enter a number between 1 and 7 : ");
 
-while(!inputIsBestNumber(input, bestNumber)){
-    input = askForInput("Are you sure ? ");
-}
+}while(!isValidInput(input,minDay,maxDay));
 
-function askForInput(message){
+giveDayOfWeek(Number(input));
 
-    do{
-        input = prompt(message) ;
+
+function giveDayOfWeek(input){
+    switch(input){
+        
+        case 1 : 
+            console.log("Monday");
+            break;
+        case 2 : 
+            console.log("Tuesday");
+            break;
+        case 3 : 
+            console.log("Wednesday");
+            break;
+        case 4 : 
+            console.log("Thursday");
+            break;
+        case 5 : 
+            console.log("Friday");
+            break;
+        case 6 : 
+            console.log("Saturday");
+            break;
+        case 7 : 
+            console.log("Sunday");
+            break;
+        default:console.log("Day unknown ...")  ;  
     }
-    while(isNullOrEmpty(input));
+}
+function isValidInput(input,min, max){
     
-    return input;
+    if(!isNumericString(input)){
+        return false;
+    }
+    return isBetweenLimit(Number(input),min,max);
 }
 
-function inputIsBestNumber(input, comparison) {
-    return input == comparison;
+function isNumericString(input) {
+    return typeof input === 'string' && !isNaN(input) && !isNullOrEmpty(input);
+}
+function isBetweenLimit(input, min, max){
+    
+    return (input >= min && input<=max);
 }
 
 function isNullOrEmpty(str){
