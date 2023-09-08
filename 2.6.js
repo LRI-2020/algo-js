@@ -1,4 +1,5 @@
 ﻿const prompt = require('prompt-sync')();
+const helpers=require("./Helpers.js");
 
 let input;
 const minDay = 1;
@@ -7,7 +8,7 @@ const maxDay=7;
 do {
     input = prompt("Please, enter a number between 1 and 7 : ");
 
-}while(!isValidInput(input,minDay,maxDay));
+}while(!helpers.isValidInput(input,minDay,maxDay));
 
 giveDayOfWeek(Number(input));
 
@@ -38,23 +39,4 @@ function giveDayOfWeek(input){
             break;
         default:console.log("Day unknown ...")  ;  
     }
-}
-function isValidInput(input,min, max){
-    
-    if(!isNumericString(input)){
-        return false;
-    }
-    return isBetweenLimit(Number(input),min,max);
-}
-
-function isNumericString(input) {
-    return typeof input === 'string' && !isNaN(input) && !isNullOrEmpty(input);
-}
-function isBetweenLimit(input, min, max){
-    
-    return (input >= min && input<=max);
-}
-
-function isNullOrEmpty(str){
-    return str === '' || str === null || str === undefined || str.trim().length === 0;
 }

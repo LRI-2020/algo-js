@@ -1,5 +1,4 @@
-﻿//import { isNullOrEmpty} from 'Helpers.mjs';
-
+﻿const helpers=require("./Helpers.js");
 const prompt = require('prompt-sync')();
 
 const bestNumber = 42;
@@ -16,7 +15,7 @@ function askForInput(message){
     do{
         input = prompt(message) ;
     }
-    while(isNullOrEmpty(input));
+    while(helpers.isNullOrEmpty(input));
     
     return input;
 }
@@ -25,6 +24,3 @@ function inputIsBestNumber(input, comparison) {
     return input == comparison;
 }
 
-function isNullOrEmpty(str){
-    return str === '' || str === null || str === undefined || str.trim().length === 0;
-}

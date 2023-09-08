@@ -1,4 +1,5 @@
 ﻿const prompt = require('prompt-sync')();
+const helpers=require("./Helpers.js");
 
 let min, max, current;
 let isMinMaxOk;
@@ -36,7 +37,7 @@ function askNumberAsInput(message){
    
    do {
         input = prompt(message);
-        isANumber = isNumericString(input);
+        isANumber = helpers.isNumericString(input);
     }
     while(!isANumber);
    
@@ -52,12 +53,4 @@ function checkCurrent(min, max, current){
     else{
         console.log(current + " is not between " + min + " and " + max + ".");
     }
-}
-function isNumericString(input) {
-    return typeof input === 'string' && !isNaN(input) && !isNullOrEmpty(input);
-}
-
-function isNullOrEmpty(str){
-    
-    return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
