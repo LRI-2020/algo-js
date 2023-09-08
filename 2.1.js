@@ -1,7 +1,16 @@
 ﻿const prompt = require('prompt-sync')();
+const helpers=require("./Helpers.js");
 
-let age= Number(prompt("What's your age?"));
-checkAge(age);
+
+let age;
+
+do {
+    age = prompt("What's your age?");
+}
+while(!helpers.isNumericString(age))
+
+
+checkAge(Number(age));
 
 function checkAge(age){
     if(age >= 18){
