@@ -20,4 +20,4 @@ function isNumericString(input) {
 function isNullOrEmpty(str){
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
-module.exports = { isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit};
+export{ isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit};
