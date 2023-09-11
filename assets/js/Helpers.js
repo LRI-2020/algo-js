@@ -1,4 +1,5 @@
-﻿function askForNumericString(message) {
+﻿import {tvSerie} from "./classes.js";
+function askForNumericString(message) {
 
     let input;
     do {
@@ -73,4 +74,27 @@ function splitIntoArray(input,separator){
     return input.split(separator);
 }
 
-export {askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
+function isValidArray(array){
+
+    if (!(Array.isArray(array) && array.length > 0)){
+        alert("Please enter the casting with correct format : the name of the actors should be divided by a comma (Eg:) 'Jensen Ackles, Jared Padalecki'")
+        return false;
+    }
+
+    return true;
+}
+
+function askTvSerie(){
+    let name = askForNotEmptyInput("Enter the name of your serie");
+    let year = askForNotEmptyInput("Enter the year of your serie");
+    let casting;
+
+    do {
+        casting = askForNotEmptyInput("Enter the name of the actors divided by a comma (Eg:) 'Jensen Ackles, Jared Padalecki'").split(",");
+    } while (!isValidArray(casting));
+
+    return new tvSerie(name, year, casting);
+
+}
+
+export {askTvSerie,isValidArray,askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
