@@ -18,6 +18,8 @@ import{runExercice4_3} from "./4.3.js";
 import{runExercice4_4} from "./4.4.js";
 import{runExercice4_5} from "./4.5.js";
 import{runExercice4_6} from "./4.6.js";
+import{runExercice5_1} from "./5.1.js";
+import{runExercice5_2} from "./5.2.js";
 
 document.getElementById("btn-1-1").onclick = function() {
     runExercice1_1();
@@ -80,4 +82,11 @@ document.getElementById("btn-4-5").onclick = function() {
 }
 document.getElementById("btn-4-6").onclick = function() {
     runExercice4_6();
+}
+
+document.getElementById("btn-5-1").onclick = function() {
+    runExercice5_1();
+}
+document.getElementById("btn-5-2").onclick = function() {
+    runExercice5_2();
 }

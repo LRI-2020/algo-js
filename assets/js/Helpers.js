@@ -9,6 +9,16 @@
     return input;
 }
 
+function askForNotEmptyInput(message){
+    let input;
+    do {
+        input = prompt(message);
+
+    } while (isNullOrEmpty(input));
+
+    return input;
+}
+
 function rand10() {
 
     let min = Math.ceil(1);
@@ -58,4 +68,9 @@ function isNullOrEmpty(str) {
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
 
-export {isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
+function splitIntoArray(input,separator){
+    
+    return input.split(separator);
+}
+
+export {askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
