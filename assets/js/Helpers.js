@@ -18,6 +18,13 @@ function rand10() {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+function randMinMax(min, max) {
+
+    min = Math.ceil(min);
+    max = Math.floor(max+1);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
 
 function isValidNumericInput(input, min, max){
 
@@ -40,4 +47,4 @@ function isNumericString(input) {
 function isNullOrEmpty(str){
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
-export{ isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10};
+export{ isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
