@@ -1,8 +1,14 @@
-﻿import {askForNumericString,rand10} from "./Helpers.js";
+﻿import {isValidNumericInput,askForNumericString, rand10} from "./Helpers.js";
 
 function runExercice4_3() {
        
-    let count = askForNumericString("How many random number do you want?");
+    let count;
+    
+    do {
+        count = prompt("How many random number do you want?(max : 50)");
+    }
+    while(!isValidNumericInput(count,1,50));
+    
     multiRand(count);
 }
 
