@@ -11,6 +11,14 @@ function askForNumericString(message){
     return input;
 }
 
+function rand10() {
+
+    let min = Math.ceil(1);
+    let max = Math.floor(11);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+
 function isValidNumericInput(input, min, max){
 
     if(!isNumericString(input)){
@@ -32,4 +40,4 @@ function isNumericString(input) {
 function isNullOrEmpty(str){
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
-export{ isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString};
+export{ isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10};
