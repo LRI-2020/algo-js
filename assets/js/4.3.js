@@ -1,4 +1,4 @@
-﻿import {isValidNumericInput,askForNumericString, rand10} from "./Helpers.js";
+﻿import {isValidNumericInput, rand10} from "./Helpers.js";
 
 function runExercice4_3() {
        

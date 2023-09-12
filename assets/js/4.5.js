@@ -1,4 +1,5 @@
 ﻿import {isNumericString} from "./Helpers.js";
+import {Point} from "./classes.js";
 
 function runExercice4_5() {
        
@@ -52,11 +53,6 @@ function parseToPoint(input){
     return new Point(Number(coordinates[0]), Number(coordinates[1]));
 }
 
-class Point {
-    constructor(abscissa, ordered) {
-        this.abscissa = abscissa;
-        this.ordered = ordered;
-    }
-}
+
 
 export {runExercice4_5};
