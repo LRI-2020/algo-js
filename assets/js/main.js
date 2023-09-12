@@ -20,6 +20,9 @@ import{runExercice4_5} from "./4.5.js";
 import{runExercice4_6} from "./4.6.js";
 import{runExercice5_1} from "./5.1.js";
 import{runExercice5_2} from "./5.2.js";
+import{runExercice6_1} from "./6.1.js";
+import{runExercice6_2} from "./6.2.js";
+import{runExercice6_3} from "./6.3.js";
 
 document.getElementById("btn-1-1").onclick = function() {
     runExercice1_1();
@@ -89,4 +92,14 @@ document.getElementById("btn-5-1").onclick = function() {
 }
 document.getElementById("btn-5-2").onclick = function() {
     runExercice5_2();
+}
+
+document.getElementById("btn-6-1").onclick = function() {
+    runExercice6_1();
+}
+document.getElementById("btn-6-2").onclick = function() {
+    runExercice6_2();
+}
+document.getElementById("btn-6-3").onclick = function() {
+    runExercice6_3();
 }
