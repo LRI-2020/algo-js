@@ -53,22 +53,24 @@ class Rectangle {
 
     collidesWith(rectangle2) {
 
-        let minAx = this.topLeft.abscissa;
-        let maxAx = this.bottomRight.abscissa;
-        let minAy = this.bottomRight.ordered;
-        let maxAy = this.topLeft.ordered;
+        let leftAx = this.topLeft.abscissa;
+        let leftAy = this.topLeft.ordered;
 
-        let minBx = rectangle2.topLeft.abscissa;
-        let maxBx = rectangle2.bottomRight.abscissa;
-        let minBy = rectangle2.bottomRight.ordered;
-        let maxBy = rectangle2.topLeft.ordered;
+        let rightAx = this.bottomRight.abscissa;
+        let rightAy = this.bottomRight.ordered;
 
-        let aLeftOfB = maxAx < minBx;
-        let aRightOfB = minAx > maxBx;
-        let aAboveB = minAy > maxBy;
-        let aBelowB = maxAy < minBy;
+        let leftBx = rectangle2.topLeft.abscissa;
+        let leftBy = rectangle2.topLeft.ordered;
 
-        return !(aLeftOfB || aRightOfB || aAboveB || aBelowB);
+        let rightBx = rectangle2.bottomRight.abscissa;
+        let rightBy = rectangle2.bottomRight.ordered;
+
+        let aLeftOfB = rightAx < leftBx;
+        let bLeftOfA = leftAx > rightBx;
+        let aAboveB = rightAy > leftBy;
+        let bAboveA = leftAy < rightBy;
+
+        return !(aLeftOfB || bLeftOfA || aAboveB || bAboveA);
 
     }
 
