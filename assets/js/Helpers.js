@@ -97,4 +97,11 @@ function askTvSerie(){
 
 }
 
-export {askTvSerie,isValidArray,askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
+class Point {
+    constructor(abscissa, ordered) {
+        this.abscissa = abscissa;
+        this.ordered = ordered;
+    }
+}
+
+export {Point, askTvSerie,isValidArray,askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
