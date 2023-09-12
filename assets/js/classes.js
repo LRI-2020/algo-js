@@ -42,14 +42,12 @@ class circle {
 }
 
 class Rectangle {
-    constructor(topLeftXPos, topLeftYPos, width, length) {
+    constructor(topLeftXPos, topLeftYPos, height, width) {
 
         this.topLeft = new Point(topLeftXPos, topLeftYPos);
+        this.height = height;
         this.width = width;
-        this.length = length;
-        this.topRight = new Point(this.topLeft.abscissa + this.length, this.topLeft.ordered);
-        this.bottomLeft = new Point(this.topLeft.abscissa, this.topLeft.ordered - this.width);
-        this.bottomRight = new Point(this.topLeft.abscissa + this.length, this.topLeft.ordered - this.width);
+        this.bottomRight = new Point(this.topLeft.abscissa + this.width, this.topLeft.ordered - this.height);
     }
 
 
@@ -101,13 +99,13 @@ export {tvSerie, Point, Rectangle, TestCase, circle}
 
 // get perimeter() {
 //
-//     let topLength = getPointsHorizontalLine(this.topLeft, this.topRight);
-//     let bottomLength = getPointsHorizontalLine(this.bottomLeft, this.bottomRight);
-//     let leftWidth = getPointsVerticalLine(this.topLeft, this.bottomLeft);
-//     let rightWidth = getPointsVerticalLine(this.topRight, this.bottomRight);
+//     let topWidth = getPointsHorizontalLine(this.topLeft, this.topRight);
+//     let bottomWidth = getPointsHorizontalLine(this.bottomLeft, this.bottomRight);
+//     let leftHeight = getPointsVerticalLine(this.topLeft, this.bottomLeft);
+//     let rightHeight = getPointsVerticalLine(this.topRight, this.bottomRight);
 //
 //
-//     return topLength.concat(bottomLength,leftWidth,rightWidth);
+//     return topWidth.concat(bottomWidth,leftHeight,rightHeight);
 // }
 
 // collidesWith(rectangle2) {
