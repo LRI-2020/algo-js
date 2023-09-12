@@ -1,4 +1,4 @@
-﻿ import {Point} from "./Helpers.js";
+﻿ import {circle} from "./classes.js";
 function runExercice6_1() {
 
     let circle1 = new circle(2,4, 3);
@@ -9,25 +9,6 @@ function runExercice6_1() {
 
 }
 
-class circle{
-    constructor(xPos,yPos,radius) {
-        
-        this.origin = new Point(xPos,yPos);
-        this.radius = radius;
-        
-    }
-    
-    get surface(){
-        
-        return (Math.PI * Math.pow(this.radius,2));
-    }
-    
-    move(xOffset,yOffset){
-       
-        this.origin.abscissa += xOffset;
-        this.origin.ordered += yOffset;
-        
-    }
-}
+
 
 export {runExercice6_1};

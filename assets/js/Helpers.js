@@ -1,4 +1,4 @@
-﻿import {tvSerie} from "./classes.js";
+﻿import { tvSerie} from "./classes.js";
 function askForNumericString(message) {
 
     let input;
@@ -69,11 +69,6 @@ function isNullOrEmpty(str) {
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
 
-function splitIntoArray(input,separator){
-    
-    return input.split(separator);
-}
-
 function isValidArray(array){
 
     if (!(Array.isArray(array) && array.length > 0)){
@@ -97,11 +92,70 @@ function askTvSerie(){
 
 }
 
-class Point {
-    constructor(abscissa, ordered) {
-        this.abscissa = abscissa;
-        this.ordered = ordered;
-    }
-}
+export {askTvSerie,isValidArray,askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
 
-export {Point, askTvSerie,isValidArray,askForNotEmptyInput,isPositiveIntegerString, isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, askForNumericString, rand10, randMinMax};
+
+//first evrsion for collide
+
+
+// function getPointsVerticalLine(point1, point2) {
+//
+//     if (point1.abscissa !== point2.abscissa) {
+//
+//         throw new Error('line os not vertical');
+//     }
+//
+//     return getAllY(point1, point2);
+//
+// }
+//
+// function getPointsHorizontalLine(point1, point2) {
+//
+//     if (point1.ordered !== point2.ordered) {
+//
+//         throw new Error('line is not horizontal');
+//     }
+//
+//     return getAllX(point1, point2);
+// }
+//
+// function getAllY(point1, point2) {
+//     let result = [];
+//
+//     if (point2.ordered - point1.ordered > 0) {
+//         for (let i = point1.ordered; i <= point2.ordered; i++) {
+//             let currentPoint = new Point(point1.abscissa, i);
+//             result.push(currentPoint);
+//         }
+//         return result;
+//     }
+//
+//     for (let i = point2.ordered; i <= point1.ordered; i++) {
+//         let currentPoint = new Point(point1.abscissa, i);
+//         result.push(currentPoint);
+//     }
+//
+//     return result;
+// }
+//
+// function getAllX(point1, point2) {
+//     let result = [];
+//
+//     if ((point2.abscissa - point1.abscissa) > 0) {
+//         for (let i = point1.abscissa; i <= point2.abscissa; i++) {
+//             let currentPoint = new Point(i, point1.ordered);
+//             result.push(currentPoint);
+//         }
+//         return result;
+//     }
+//
+//     for (let i = point2.abscissa; i <= point1.abscissa; i++) {
+//         let currentPoint = new Point(i, point1.ordered);
+//         result.push(currentPoint);
+//     }
+//
+//     return result;
+// }
+
+
+

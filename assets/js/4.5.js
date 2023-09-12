@@ -1,4 +1,5 @@
-﻿import {Point,isNumericString} from "./Helpers.js";
+﻿import {isNumericString} from "./Helpers.js";
+import {Point} from "./classes.js";
 
 function runExercice4_5() {
        

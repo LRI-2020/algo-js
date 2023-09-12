@@ -1,4 +1,4 @@
-﻿import {isValidNumericInput,askForNumericString, randMinMax} from "./Helpers.js";
+﻿import {isValidNumericInput, randMinMax} from "./Helpers.js";
 
 function runExercice4_4() {
     let learners = ["Alexandre Va", "Alexandre Ve", "Antoine", "Bastien", "Carole", "Dorian", "Elisabeth", "Elodie", "Justin", "Justine F", "Justine M","Kimi", "Layla", "Lidwine","Lucas","Marie","Mathias","Okly","Pierre","Robin","Rosalie","Stephane","Tim","Tom","Valentin","Virginie"];

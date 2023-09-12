@@ -1,4 +1,4 @@
-﻿import {askForNumericString, isPositiveIntegerString} from "./Helpers.js";
+﻿import { isPositiveIntegerString} from "./Helpers.js";
 
 function runExercice4_6() {
     
