@@ -24,4 +24,13 @@ function isNumericString(input) {
 function isNullOrEmpty(str){
     return str === '' || str === null || str === undefined || str.trim().length === 0;
 }
-module.exports = { isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit};
+
+function randMinMax(min, max) {
+
+    min = Math.ceil(min);
+    max = Math.floor(max + 1);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+module.exports = { isNullOrEmpty, isNumericString, isValidNumericInput, isBetweenLimit, randMinMax};
+
