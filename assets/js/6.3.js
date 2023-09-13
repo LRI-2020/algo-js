@@ -11,7 +11,7 @@ function runExercice6_3() {
     div.appendChild(canvas);
  
    
-    let refRectangle =  new Rectangle(0,0,900,900);
+    let refRectangle =  new Rectangle(100,100,200,200);
     drawRectangle(refRectangle,canvas);
 
     let count = prompt("How many collided rectangles do you want?");
