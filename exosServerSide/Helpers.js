@@ -1,4 +1,4 @@
-﻿4
+﻿
 
 function isValidNumericInput(input, min, max){
 
@@ -9,7 +9,10 @@ function isValidNumericInput(input, min, max){
 }
 
 function isBetweenLimit(input, min, max){
-
+    if(!(input >= min && input<=max)){
+        console.log("Enter a valid number between " + min + "and " + max);
+        
+    }
     return (input >= min && input<=max);
 }
 
