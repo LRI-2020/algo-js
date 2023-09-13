@@ -7,9 +7,14 @@ function isValidKelvinTemp(number) {
     return helpers.isValidNumericInput(number, 0, Number.MAX_VALUE);
 }
 
-function convertKToF(number) {
+function ConvertKToC(number) {
+    
+    return Math.floor(number-273.15);
+}
+
+function ConvertKToF(number) {
  
-   return (number - 273.15) * 1.8 + 32;
+   return Math.floor((ConvertKToC(number)) * 1.8 + 32);
     
 }
 
@@ -18,7 +23,7 @@ function KTFStart() {
     let input;
 
     do {
-        input = prompt("Enter the temperature you want to convert to Kelvin : ");
+        input = prompt("Enter the temperature you want to convert to Fahrenheit : ");
         
         if(input === null){
             break;
@@ -27,8 +32,10 @@ function KTFStart() {
     } while (!isValidKelvinTemp(input));
 
     if (input !== null) {
-       let tempInFahrenheit= convertKToF(Number(input));
-       console.log(input + " Kelvin equals " + tempInFahrenheit + " Fahrenheit")
+        let Cel = ConvertKToC(Number(input));
+        let Far= ConvertKToF(Number(input));
+       console.log(input + " Kelvin equals " + Far + " Fahrenheit")
+       console.log(input + " Kelvin equals " + Cel + " Celsius")
     }
 
 
